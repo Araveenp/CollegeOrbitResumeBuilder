@@ -19,7 +19,7 @@ const QAS = [
           time-consuming and error-prone. It is easy to run into formatting
           issues, such as using different bullet points or font styles after
           copying and pasting. On the other hand, a resume builder like
-          OpenResume saves time and prevents formatting mistakes by
+          College Orbit Resume saves time and prevents formatting mistakes by
           automatically formatting the resume. It also offers the convenience of
           easily changing font types or sizes with a simple click. In summary, a
           resume builder is easier to use compared to a resume template.
@@ -29,50 +29,50 @@ const QAS = [
   },
   {
     question:
-      "Q2. What uniquely sets OpenResume apart from other resume builders and templates?",
+      "Q2. What uniquely sets College Orbit Resume apart from other resume builders and templates?",
     answer: (
       <>
         <p>
-          Other than OpenResume, there are some great free resume builders out
+          Other than College Orbit Resume, there are some great free resume builders out
           there, e.g. <Link href="https://rxresu.me/">Reactive Resume</Link>,{" "}
-          <Link href="https://flowcv.com/">FlowCV</Link>. However, OpenResume
+          <Link href="https://flowcv.com/">FlowCV</Link>. However, College Orbit Resume
           stands out with 2 distinctive features:
         </p>{" "}
         <p>
           <span className="font-semibold">
-            1. OpenResume is designed specifically for the U.S. job market and
+            1. College Orbit Resume is designed specifically for the U.S. job market and
             best practices.
           </span>
           <br />
           Unlike other resume builders that target a global audience and offer
-          many customization options, OpenResume intentionally only offers
+          many customization options, College Orbit Resume intentionally only offers
           options that are aligned with U.S. best practices. For example, it
           excludes the option to add a profile picture to avoid bias and
           discrimination. It offers only the core sections, e.g. profile, work
           experience, education, and skills, while omitting unnecessary sections
-          like references. Additionally, OpenResume only offers a top down
+          like references. Additionally, College Orbit Resume only offers a top down
           single column resume design as opposed to two column design, because
           single column design works best for AST. <br />{" "}
         </p>
         <p>
           <span className="font-semibold">
-            2. OpenResume is super privacy focus.
+            2. College Orbit Resume is super privacy focus.
           </span>{" "}
           <br />
           While other resume builders may require email sign up and store user
-          data in their databases, OpenResume believes that resume data should
+          data in their databases, College Orbit Resume believes that resume data should
           remain private and accessible only on user’s local machine. Therefore,
-          OpenResume doesn’t require sign up to use the app, and all inputted
+          College Orbit Resume doesn’t require sign up to use the app, and all inputted
           data is stored in user’s browser that only user has access to.
         </p>
       </>
     ),
   },
   {
-    question: "Q3. Who created OpenResume and why?",
+    question: "Q3. Who created College Orbit Resume and why?",
     answer: (
       <p>
-        OpenResume was created by{" "}
+        College Orbit Resume was created by{" "}
         <Link href="https://github.com/xitanggg">Xitang Zhao</Link> and designed
         by <Link href="https://www.linkedin.com/in/imzhi">Zhigang Wen</Link> as
         a weekend project. As immigrants to the US, we had made many mistakes
@@ -82,22 +82,22 @@ const QAS = [
         noticed students were making the same mistakes that we had made before.
         This led us to think about how we can be of help with the knowledge and
         skills we have gained. We started chatting and working over the weekends
-        that led to OpenResume, where we integrated best practices and our
-        knowledge into this resume builder. Our hope is that OpenResume can help
+        that led to College Orbit Resume, where we integrated best practices and our
+        knowledge into this resume builder. Our hope is that College Orbit Resume can help
         anyone to easily create a modern professional resume that follows best
         practices and enable anyone to apply for jobs with confidence.
       </p>
     ),
   },
   {
-    question: "Q4. How can I support OpenResume?",
+    question: "Q4. How can I support College Orbit Resume?",
     answer: (
       <>
         <p>
-          The best way to support OpenResume is to share your thoughts and
+          The best way to support College Orbit Resume is to share your thoughts and
           feedback with us to help further improve it. You can send us an email
           at{" "}
-          <Link href="mailto:hello@open-resume.com">hello@open-resume.com</Link>{" "}
+          <Link href="mailto:hello@collegeorbit.com">hello@collegeorbit.com</Link>{" "}
           or{" "}
           <Link href="https://github.com/xitanggg/open-resume/issues/new">
             open an issue
@@ -106,7 +106,7 @@ const QAS = [
           hear from you.
         </p>
         <p>
-          Another great way to support OpenResume is by spreading the words.
+          Another great way to support College Orbit Resume is by spreading the words.
           Share it with your friends, on social media platforms, or with your
           school’s career center. Our goal is to reach more people who struggle
           with creating their resume, and your word-of-mouth support would be

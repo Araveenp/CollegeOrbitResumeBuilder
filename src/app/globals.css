@@ -25,10 +25,16 @@
 }
 
 :root {
-  --theme-purple: #5d52d9;
-  --theme-blue: #4fc5eb;
+  --theme-purple: #3B5BDB;
+  --theme-blue: #4F46E5;
   /* Keep the below variable names in sync with CSS_VARIABLES in globals-css.ts */
   --top-nav-bar-height: 3.5rem;
   --resume-control-bar-height: 3rem;
   --resume-padding: 1.5rem;
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', 'Geist', system-ui, sans-serif;
+  }
 }

@@ -94,7 +94,7 @@ export const ResumePDF = ({
 
   return (
     <>
-      <Document title={`${name} Resume`} author={name} producer={"OpenResume"}>
+      <Document title={`${name} Resume`} author={name} producer={"College Orbit Resume"}>
         <Page
           size={documentSize === "A4" ? "A4" : "LETTER"}
           style={{
