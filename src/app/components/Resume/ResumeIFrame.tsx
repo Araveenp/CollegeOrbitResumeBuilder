@@ -40,35 +40,9 @@ const getIframeInitialContent = (isA4: boolean) => {
     ${allFontFamiliesPreloadLinks}
     <style>
       ${allFontFamiliesFontFaces}
-      body {
-        width: ${width}pt;
-        margin: 0;
-        padding: 0;
-        -webkit-text-size-adjust:none;
-        background-color: #f3f4f6;
-      }
-      /* This creates a visual page break effect */
-      body > div > div {
-        background-color: white;
-        min-height: ${isA4 ? 842 : 792}pt;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        position: relative;
-      }
-      body > div > div::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        pointer-events: none;
-        background-image: linear-gradient(to bottom, transparent calc(100% - 10pt), #f3f4f6 calc(100% - 10pt), #f3f4f6 100%);
-        background-size: 100% ${isA4 ? 842 : 792}pt;
-        z-index: 9999;
-      }
     </style>
   </head>
-  <body>
+  <body style='overflow: hidden; width: ${width}pt; margin: 0; padding: 0; -webkit-text-size-adjust:none;'>
     <div></div>
   </body>
 </html>`;
@@ -109,6 +83,7 @@ const ResumeIframe = ({
     <div
       style={{
         maxWidth: `${width * scale}px`,
+        maxHeight: `${height * scale}px`,
       }}
     >
       {/* There is an outer div and an inner div here. The inner div sets the iframe width and uses transform scale to zoom in/out the resume iframe.
@@ -117,7 +92,7 @@ const ResumeIframe = ({
       <div
         style={{
           width: `${width}px`,
-          minHeight: `${height}px`,
+          height: `${height}px`,
           transform: `scale(${scale})`,
         }}
         className={`origin-top-left bg-white shadow-lg`}
