@@ -173,7 +173,7 @@ export const TemplateSelections = ({
 }) => {
   return (
     <SelectionsWrapper>
-      {[{ id: "standard", label: "Standard" }, { id: "classic", label: "Classic" }].map((type, idx) => {
+      {[{ id: "standard", label: "Standard" }, { id: "classic", label: "Classic" }, { id: "deedy", label: "Deedy" }].map((type, idx) => {
         return (
           <Selection
             key={idx}

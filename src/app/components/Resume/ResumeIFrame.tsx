@@ -42,7 +42,7 @@ const getIframeInitialContent = (isA4: boolean) => {
       ${allFontFamiliesFontFaces}
     </style>
   </head>
-  <body style='overflow: hidden; width: ${width}pt; margin: 0; padding: 0; -webkit-text-size-adjust:none;'>
+  <body style='width: ${width}pt; margin: 0; padding: 0; -webkit-text-size-adjust:none;'>
     <div></div>
   </body>
 </html>`;
@@ -83,7 +83,6 @@ const ResumeIframe = ({
     <div
       style={{
         maxWidth: `${width * scale}px`,
-        maxHeight: `${height * scale}px`,
       }}
     >
       {/* There is an outer div and an inner div here. The inner div sets the iframe width and uses transform scale to zoom in/out the resume iframe.
@@ -92,7 +91,7 @@ const ResumeIframe = ({
       <div
         style={{
           width: `${width}px`,
-          height: `${height}px`,
+          minHeight: `${height}px`,
           transform: `scale(${scale})`,
         }}
         className={`origin-top-left bg-white shadow-lg`}

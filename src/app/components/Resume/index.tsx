@@ -3,6 +3,7 @@ import { useState, useMemo } from "react";
 import { ResumeIframeCSR } from "components/Resume/ResumeIFrame";
 import { ResumePDF } from "components/Resume/ResumePDF";
 import { ResumePDFClassic } from "components/Resume/ResumePDFClassic";
+import { ResumePDFDeedy } from "components/Resume/ResumePDFDeedy";
 import {
   ResumeControlBarCSR,
   ResumeControlBarBorder,
@@ -22,10 +23,11 @@ export const Resume = () => {
   const [scale, setScale] = useState(0.8);
   const resume = useAppSelector(selectResume);
   const settings = useAppSelector(selectSettings);
-  const document = useMemo(
-    () => settings.template === "classic" ? <ResumePDFClassic resume={resume} settings={settings} isPDF={true} /> : <ResumePDF resume={resume} settings={settings} isPDF={true} />,
-    [resume, settings]
-  );
+  const document = useMemo(() => {
+    if (settings.template === "classic") return <ResumePDFClassic resume={resume} settings={settings} isPDF={true} />;
+    if (settings.template === "deedy") return <ResumePDFDeedy resume={resume} settings={settings} isPDF={true} />;
+    return <ResumePDF resume={resume} settings={settings} isPDF={true} />;
+  }, [resume, settings]);
 
   useRegisterReactPDFFont();
   useRegisterReactPDFHyphenationCallback(settings.fontFamily);
@@ -42,13 +44,21 @@ export const Resume = () => {
               scale={scale}
               enablePDFViewer={DEBUG_RESUME_PDF_FLAG}
             >
-              {settings.template === "classic" ? (
+              {settings.template === "classic" && (
                 <ResumePDFClassic
                   resume={resume}
                   settings={settings}
                   isPDF={DEBUG_RESUME_PDF_FLAG}
                 />
-              ) : (
+              )}
+              {settings.template === "deedy" && (
+                <ResumePDFDeedy
+                  resume={resume}
+                  settings={settings}
+                  isPDF={DEBUG_RESUME_PDF_FLAG}
+                />
+              )}
+              {settings.template !== "classic" && settings.template !== "deedy" && (
                 <ResumePDF
                   resume={resume}
                   settings={settings}
