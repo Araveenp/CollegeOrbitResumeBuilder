@@ -2,6 +2,7 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "lib/redux/store";
 
 export interface Settings {
+  template: string;
   themeColor: string;
   fontFamily: string;
   fontSize: string;
@@ -42,6 +43,7 @@ export const DEFAULT_FONT_SIZE = "11"; // text-base https://tailwindcss.com/docs
 export const DEFAULT_FONT_COLOR = "#171717"; // text-neutral-800
 
 export const initialSettings: Settings = {
+  template: "standard",
   themeColor: DEFAULT_THEME_COLOR,
   fontFamily: DEFAULT_FONT_FAMILY,
   fontSize: DEFAULT_FONT_SIZE,
@@ -58,7 +60,7 @@ export const initialSettings: Settings = {
     educations: "EDUCATION",
     projects: "PROJECT",
     skills: "SKILLS",
-    custom: "CUSTOM SECTION",
+    custom: "CERTIFICATIONS",
   },
   formsOrder: ["workExperiences", "educations", "projects", "skills", "custom"],
   showBulletPoints: {

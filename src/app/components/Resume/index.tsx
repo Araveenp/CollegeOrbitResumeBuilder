@@ -2,6 +2,7 @@
 import { useState, useMemo } from "react";
 import { ResumeIframeCSR } from "components/Resume/ResumeIFrame";
 import { ResumePDF } from "components/Resume/ResumePDF";
+import { ResumePDFClassic } from "components/Resume/ResumePDFClassic";
 import {
   ResumeControlBarCSR,
   ResumeControlBarBorder,
@@ -22,7 +23,7 @@ export const Resume = () => {
   const resume = useAppSelector(selectResume);
   const settings = useAppSelector(selectSettings);
   const document = useMemo(
-    () => <ResumePDF resume={resume} settings={settings} isPDF={true} />,
+    () => settings.template === "classic" ? <ResumePDFClassic resume={resume} settings={settings} isPDF={true} /> : <ResumePDF resume={resume} settings={settings} isPDF={true} />,
     [resume, settings]
   );
 
@@ -41,11 +42,19 @@ export const Resume = () => {
               scale={scale}
               enablePDFViewer={DEBUG_RESUME_PDF_FLAG}
             >
-              <ResumePDF
-                resume={resume}
-                settings={settings}
-                isPDF={DEBUG_RESUME_PDF_FLAG}
-              />
+              {settings.template === "classic" ? (
+                <ResumePDFClassic
+                  resume={resume}
+                  settings={settings}
+                  isPDF={DEBUG_RESUME_PDF_FLAG}
+                />
+              ) : (
+                <ResumePDF
+                  resume={resume}
+                  settings={settings}
+                  isPDF={DEBUG_RESUME_PDF_FLAG}
+                />
+              )}
             </ResumeIframeCSR>
           </section>
           <ResumeControlBarCSR

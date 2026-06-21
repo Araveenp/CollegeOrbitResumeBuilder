@@ -161,3 +161,32 @@ export const DocumentSizeSelections = ({
     </SelectionsWrapper>
   );
 };
+
+export const TemplateSelections = ({
+  selectedTemplate,
+  themeColor,
+  handleSettingsChange,
+}: {
+  themeColor: string;
+  selectedTemplate: string;
+  handleSettingsChange: (field: GeneralSetting, value: string) => void;
+}) => {
+  return (
+    <SelectionsWrapper>
+      {[{ id: "standard", label: "Standard" }, { id: "classic", label: "Classic" }].map((type, idx) => {
+        return (
+          <Selection
+            key={idx}
+            selectedColor={themeColor}
+            isSelected={type.id === selectedTemplate}
+            onClick={() => handleSettingsChange("template", type.id)}
+          >
+            <div className="flex flex-col items-center">
+              <div>{type.label}</div>
+            </div>
+          </Selection>
+        );
+      })}
+    </SelectionsWrapper>
+  );
+};
