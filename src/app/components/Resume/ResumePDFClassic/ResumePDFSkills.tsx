@@ -3,6 +3,7 @@ import {
   ResumePDFClassicSection,
   ResumePDFClassicBulletList,
   ResumeFeaturedSkill,
+  ResumePDFClassicText,
 } from "components/Resume/ResumePDFClassic/common";
 import { styles, spacing } from "components/Resume/ResumePDFClassic/styles";
 import type { ResumeSkills } from "lib/redux/types";
