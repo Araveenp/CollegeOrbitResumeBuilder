@@ -30,7 +30,6 @@ export const ResumePDF = ({
     formToShow,
     formsOrder,
     showBulletPoints,
-    template,
   } = settings;
   const themeColor = settings.themeColor || DEFAULT_FONT_COLOR;
 
