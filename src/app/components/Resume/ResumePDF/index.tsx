@@ -63,7 +63,6 @@ export const ResumePDF = ({
             color: DEFAULT_FONT_COLOR,
             fontFamily,
             fontSize: fontSize + "pt",
-            height: isPDF ? undefined : "max-content",
           }}
         >
           {Boolean(settings.themeColor) && (
