@@ -28,7 +28,7 @@
   --theme-purple: #3B5BDB;
   --theme-blue: #4F46E5;
   /* Keep the below variable names in sync with CSS_VARIABLES in globals-css.ts */
-  --top-nav-bar-height: 3.5rem;
+  --top-nav-bar-height: 0rem;
   --resume-control-bar-height: 3rem;
   --resume-padding: 1.5rem;
 }
