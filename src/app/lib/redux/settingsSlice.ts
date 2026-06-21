@@ -21,7 +21,6 @@ export interface Settings {
     custom: string;
   };
   formsOrder: ShowForm[];
-  template: string;
   showBulletPoints: {
     educations: boolean;
     projects: boolean;
@@ -62,7 +61,6 @@ export const initialSettings: Settings = {
     custom: "CUSTOM SECTION",
   },
   formsOrder: ["workExperiences", "educations", "projects", "skills", "custom"],
-  template: "standard",
   showBulletPoints: {
     educations: true,
     projects: true,
@@ -81,9 +79,6 @@ export const settingsSlice = createSlice({
     ) => {
       const { field, value } = action.payload;
       draft[field] = value;
-    },
-    changeTemplate: (draft, action: PayloadAction<string>) => {
-      draft.template = action.payload;
     },
     changeShowForm: (
       draft,
@@ -139,12 +134,10 @@ export const {
   changeFormOrder,
   changeShowBulletPoints,
   setSettings,
-  changeTemplate,
 } = settingsSlice.actions;
 
 export const selectSettings = (state: RootState) => state.settings;
 export const selectThemeColor = (state: RootState) => state.settings.themeColor;
-export const selectTemplate = (state: RootState) => state.settings.template;
 
 export const selectFormToShow = (state: RootState) => state.settings.formToShow;
 export const selectShowByForm = (form: ShowForm) => (state: RootState) =>

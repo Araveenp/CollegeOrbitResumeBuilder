@@ -8,7 +8,6 @@ import {
 import { usePDF } from "@react-pdf/renderer";
 import dynamic from "next/dynamic";
 import { useAppDispatch, useAppSelector } from "lib/redux/hooks";
-import { changeTemplate, selectTemplate } from "lib/redux/settingsSlice";
 
 const ResumeControlBar = ({
   scale,
@@ -29,9 +28,6 @@ const ResumeControlBar = ({
   });
 
   const [instance, update] = usePDF({ document });
-
-  const dispatch = useAppDispatch();
-  const template = useAppSelector(selectTemplate);
 
   // Hook to update pdf when document changes
   useEffect(() => {
@@ -65,23 +61,6 @@ const ResumeControlBar = ({
         </label>
       </div>
       <div className="flex items-center gap-4">
-        <div className="flex items-center gap-2">
-          <label htmlFor="template-select" className="text-sm font-medium">
-            Template:
-          </label>
-          <select
-            id="template-select"
-            value={template}
-            onChange={(e) => dispatch(changeTemplate(e.target.value))}
-            className="rounded-md border border-gray-300 px-2 py-1 text-sm outline-none focus:ring-2 focus:ring-primary"
-          >
-            <option value="standard">Standard</option>
-            <option value="professional">Professional</option>
-            <option value="modern">Modern</option>
-            <option value="compact">Compact</option>
-            <option value="creative">Creative</option>
-          </select>
-        </div>
         <a
           className="ml-1 flex items-center gap-1 rounded-md border border-gray-300 px-3 py-0.5 hover:bg-gray-100 lg:ml-4"
           href={instance.url!}
