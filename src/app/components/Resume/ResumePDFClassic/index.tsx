@@ -1,11 +1,11 @@
 import { Page, View, Document } from "@react-pdf/renderer";
 import { styles, spacing } from "components/Resume/ResumePDFClassic/styles";
-import { ResumePDFClassicProfile } from "components/Resume/ResumePDFClassic/ResumePDFClassicProfile";
-import { ResumePDFClassicWorkExperience } from "components/Resume/ResumePDFClassic/ResumePDFClassicWorkExperience";
-import { ResumePDFClassicEducation } from "components/Resume/ResumePDFClassic/ResumePDFClassicEducation";
-import { ResumePDFClassicProject } from "components/Resume/ResumePDFClassic/ResumePDFClassicProject";
-import { ResumePDFClassicSkills } from "components/Resume/ResumePDFClassic/ResumePDFClassicSkills";
-import { ResumePDFClassicCustom } from "components/Resume/ResumePDFClassic/ResumePDFClassicCustom";
+import { ResumePDFClassicProfile } from "components/Resume/ResumePDFClassic/ResumePDFProfile";
+import { ResumePDFClassicWorkExperience } from "components/Resume/ResumePDFClassic/ResumePDFWorkExperience";
+import { ResumePDFClassicEducation } from "components/Resume/ResumePDFClassic/ResumePDFEducation";
+import { ResumePDFClassicProject } from "components/Resume/ResumePDFClassic/ResumePDFProject";
+import { ResumePDFClassicSkills } from "components/Resume/ResumePDFClassic/ResumePDFSkills";
+import { ResumePDFClassicCustom } from "components/Resume/ResumePDFClassic/ResumePDFCustom";
 import { DEFAULT_FONT_COLOR } from "lib/redux/settingsSlice";
 import type { Settings, ShowForm } from "lib/redux/settingsSlice";
 import type { Resume } from "lib/redux/types";
