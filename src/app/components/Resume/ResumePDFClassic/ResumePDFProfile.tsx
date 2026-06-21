@@ -2,7 +2,7 @@ import { View } from "@react-pdf/renderer";
 import {
   ResumePDFClassicIcon,
   type IconType,
-} from "components/Resume/ResumePDFClassic/common/ResumePDFClassicIcon";
+} from "components/Resume/ResumePDFClassic/common/ResumePDFIcon";
 import { styles, spacing } from "components/Resume/ResumePDFClassic/styles";
 import {
   ResumePDFClassicLink,

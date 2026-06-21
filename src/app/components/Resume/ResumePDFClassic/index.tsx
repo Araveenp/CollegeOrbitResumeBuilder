@@ -9,7 +9,7 @@ import { ResumePDFClassicCustom } from "components/Resume/ResumePDFClassic/Resum
 import { DEFAULT_FONT_COLOR } from "lib/redux/settingsSlice";
 import type { Settings, ShowForm } from "lib/redux/settingsSlice";
 import type { Resume } from "lib/redux/types";
-import { SuppressResumePDFClassicErrorMessage } from "components/Resume/ResumePDFClassic/common/SuppressResumePDFClassicErrorMessage";
+import { SuppressResumePDFClassicErrorMessage } from "components/Resume/ResumePDFClassic/common/SuppressResumePDFErrorMessage";
 import { ResumePDFClassicSection, ResumePDFClassicText } from "components/Resume/ResumePDFClassic/common";
 
 export const ResumePDFClassic = ({
