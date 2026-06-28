@@ -20,7 +20,7 @@ export const ProfileForm = () => {
           label="Name"
           labelClassName="col-span-full"
           name="name"
-          placeholder="Antigravity"
+          placeholder="Your Name"
           value={name}
           onChange={handleProfileChange}
         />
